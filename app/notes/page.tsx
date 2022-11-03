@@ -17,9 +17,11 @@ export default async function NotesPage() {
     <>
       <div>
         <h1>Notes...</h1>
+        <div className={styles.grid}>
         {notes?.map(note => {
           return <Note key={note.id} note={note} />
         })}
+        </div>
       </div>
       <CreateNote />
     </>
